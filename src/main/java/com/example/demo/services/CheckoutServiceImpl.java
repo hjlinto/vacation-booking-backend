@@ -36,15 +36,13 @@ public class CheckoutServiceImpl implements CheckoutService {
         String orderTrackingNumber = generateOrderTrackingNumber();
 
         cartItems.forEach(item -> {
-            item.setCart(cart);
             cart.add(item);
         });
 
         cart.setOrderTrackingNumber(orderTrackingNumber);
         cart.setStatus(StatusType.ordered);
-        customer.add(cart);
 
-        customerRepository.save(customer);
+        cartRepository.save(cart);
 
         return new PurchaseResponse(orderTrackingNumber);
     }

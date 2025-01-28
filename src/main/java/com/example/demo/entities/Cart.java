@@ -53,6 +53,8 @@ public class Cart {
     private Set<CartItem> cartItems = new HashSet<>();
 
     public void add(CartItem item) {
+
         this.cartItems.add(item);
+        item.setCart(this);
     }
 }
