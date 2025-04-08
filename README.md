@@ -1,27 +1,91 @@
-<strong> **DO NOT DISTRIBUTE OR PUBLICLY POST SOLUTIONS TO THESE LABS. MAKE ALL FORKS OF THIS REPOSITORY WITH SOLUTION CODE PRIVATE. PLEASE REFER TO THE STUDENT CODE OF CONDUCT AND ETHICAL EXPECTATIONS FOR COLLEGE OF INFORMATION TECHNOLOGY STUDENTS FOR SPECIFICS. ** </strong>
-# WESTERN GOVERNORS UNIVERSITY 
-## D288 – BACK-END PROGRAMMING
-Welcome to Back-End Programming! This is an opportunity for students to develop object-oriented applications that can be integrated with relational databases, write code for object-oriented applications using Spring framework, and implements design patterns for object-oriented applications. 
-FOR SPECIFIC TASK INSTRUCTIONS AND REQUIREMENTS FOR THIS ASSESSMENT, PLEASE REFER TO THE COURSE PAGE.
-## BASIC INSTRUCTIONS
-For this project, you will be building your project using IntelliJ IDEA (Ultimate Edition) in a WGU-provided lab environment. You will be working with an existing MySQL database and Angular front-end, which are supplied for you in the lab environment. You will share this project to a private external GitLab repository and backup regularly. If you wish to work on it on your local machine, you will also need to download the Angular front-end application and create your own MySQL database. Use the links on your course page to install the integrated development environments (IDE), MySQL WorkBench, and IntelliJ IDEA, and pull the project from the lab environment.  
+# 🏝️ Vacation Booking Back-End System
+
+A Java Spring Boot RESTful back-end developed for a vacation booking platform. This application serves as the server-side component of a fictional travel agency's booking system and integrates with a pre-built Angular front-end and a MySQL database.
+
+The project modernizes legacy back-end functionality by implementing a modular, scalable, and database-driven solution using the Spring framework.
+
+---
+
+## Features
+
+- RESTful API for customer vacation bookings
+- Entity modeling for customers, vacations, excursions, carts, and locations
+- Checkout system with POST endpoint for placing orders
+- Custom service layer with response tracking
+- Input validation for front-end form compatibility
+- CORS configuration for Angular integration
+- Sample data preloaded at runtime
+
+---
+
+## Developer Contributions
+
+This project was based on a starter structure and expanded to include:
+
+- Entity classes and enums designed from UML and ERD specifications
+- Repositories with Spring Data JPA and CORS support
+- Service layer implementing checkout logic and response DTOs
+- REST controller for placing customer orders
+- Input validation logic for required fields
+- Seed data for five sample customers on application start
+- Full integration testing using an unmodified Angular front-end
+
+All development followed Git version control practices.
+
+---
+
+## Technologies Used
+
+- **Java 17**
+- **Spring Boot**
+- **Spring Data JPA**
+- **REST Repositories**
+- **MySQL**
+- **Lombok**
+- **Thymeleaf**
+
+---
+
+## Project Structure
+
+```
+src/
+├── main/
+│   ├── java/com/example/demo/
+│   │   ├── bootstrap/            # Loads initial customer data
+│   │   ├── config/               # REST configuration (CORS, exposure)
+│   │   ├── controllers/          # REST controller for checkout process
+│   │   ├── dao/                  # Repositories for entity persistence
+│   │   ├── entities/             # Domain models: Customer, Vacation, Cart, etc.
+│   │   └── services/             # Business logic for checkout and orders
+│   └── resources/
+│       └── application.properties  # Database connection and JPA config
+├── test/
+│   └── java/com/example/demo/    # Spring Boot test scaffolding
+```
 
 
-## SUPPLEMENTAL RESOURCES  
-1.	How to clone a project to IntelliJ using Git?
+---
 
-> Ensure that you have Git installed on your system and that IntelliJ is installed using [Toolbox](https://www.jetbrains.com/toolbox-app/). Make sure that you are using version 2022.3.2. Once this has been confirmed, click the clone button and use the 'IntelliJ IDEA (HTTPS)' button. This will open IntelliJ with a prompt to clone the proejct. Save it in a safe location for the directory and press clone. IntelliJ will prompt you for your credentials. Enter in your WGU Credentials and the project will be cloned onto your local machine.  
+## Usage Instructions
 
-2. How to create a branch and start Development?
+### Prerequisites
+- Java 17+
+- Maven
+- MySQL Server
 
-- GitLab method
-> Press the '+' button located near your branch name. In the dropdown list, press the 'New branch' button. This will allow you to create a name for your branch. Once the branch has been named, you can select 'Create Branch' to push the branch to your repository.
+### Setup
 
-- IntelliJ method
-> In IntelliJ, Go to the 'Git' button on the top toolbar. Select the new branch option and create a name for the branch. Make sure checkout branch is selected and press create. You can now add a commit message and push the new branch to the local repo.
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/d288-vacation-booking-backend.git
+```
+2. Run the application:
+```bash
+./mvnw spring-boot:run
+```
+3. Open browser and go to:
+   http://localhost:8080/
 
-## SUPPORT
-If you need additional support, please navigate to the course page and reach out to your course instructor.
-## FUTURE USE
-Take this opportunity to create or add to a simple resume portfolio to highlight and showcase your work for future use in career search, experience, and education!
-
+## Author
+Created by: Hunter J Linton
