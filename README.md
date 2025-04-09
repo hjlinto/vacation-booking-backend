@@ -87,5 +87,12 @@ git clone https://github.com/yourusername/d288-vacation-booking-backend.git
 3. Open browser and go to:
    http://localhost:8080/
 
+---
+
+## Reflections
+- One future improvement I would focus on is enhancing the checkout experience by leveraging external APIs to support multiple payment methods, confirmation emails, and order history tracking.
+
+---
+
 ## Author
 Created by: Hunter J Linton
